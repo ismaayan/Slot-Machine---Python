@@ -60,7 +60,7 @@ def print_slot_machine(columns):
     for row in range(len(columns[0])):
         for i, column in enumerate(columns):
             if i != len(columns) - 1:
-               print(column[row], end=" | ")
+                print(column[row], end=" | ")
             else:
                 print(column[row], end="")
 
@@ -86,7 +86,7 @@ def get_number_of_lines():
         lines = input("Enter the number of lines to bet on (1-" + str(MAX_LINES) + ")? ")
         if lines.isdigit():
             lines = int(lines)
-            if 1<= lines <= MAX_LINES:
+            if 1 <= lines <= MAX_LINES:
                 break
             else:
                 print("Enter a valid number of lines.")
@@ -136,6 +136,8 @@ def main():
         if answer.lower() == "q":
             break
         balance += spin(balance)
+
+    print(f"You left with ${balance}.")
 
 
 main()
